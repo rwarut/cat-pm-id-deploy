@@ -1,0 +1,16 @@
+version: '3.3'
+
+services:
+    ocr1:
+        image: catpmid/main:ocrserver
+        ports:
+            - 80:80
+        volumes:
+#            - ./data/master:/ocrserver/master
+#            - ./data/key:/ocrserver/key
+            - ./log:/ocrserver/log
+        deploy:
+            mode: replicated
+            replicas: 10
+            restart_policy:
+                condition: on-failure
