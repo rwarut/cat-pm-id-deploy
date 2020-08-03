@@ -1,0 +1,1 @@
+docker service update --force partner_ocr1
