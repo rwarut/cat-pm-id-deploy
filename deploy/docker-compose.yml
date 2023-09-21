@@ -7,7 +7,7 @@ services:
             - 80:80
         volumes:
 #            - ./data/master:/ocrserver/master
-#            - ./data/key:/ocrserver/key
+            - ./data/key:/ocrserver/key
             - ./log:/ocrserver/log
         deploy:
             mode: replicated
